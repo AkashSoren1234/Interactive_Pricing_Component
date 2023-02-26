@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  font-size: 1.6em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.heading-1 {
+  color: hsl(227, 35%, 25%);
+  font-size: 3.5rem;
+}
+
+.paragraph {
+  color: hsl(225, 20%, 60%);
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+}
+
+.bg--header {
+  position: absolute;
+  top: -2rem;
+  left: 35%;
+  z-index: 1;
+  opacity: 0.5;
+}
+
+.header {
+  padding: 0 0 1rem 0;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+/* Card and container both are a grid component */
+/* Inside container pricingView is a grid and feature is a flex */
+/* Bar and fill component is used for coloring the width and for aligment with the slider when it is getting moved */
+
+.card {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: 10rem;
+  padding-bottom: 0;
+  background: hsl(230, 100%, 99%);
+  display: grid;
+  place-items: center;
+  grid-row-gap: 3rem;
+}
+
+.container {
+  position: relative;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  grid-row-gap: 6rem;
+}
+
+.pricing__box {
+  max-width: 50rem;
+  width: 100%;
+  padding: 5rem 0;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 4rem rgba(0, 0, 0, 0.1);
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 3rem;
+  color: hsl(225, 20%, 60%);
+}
+
+.pageViews {
+  color: hsl(225, 20%, 60%);
+  font-weight: 800;
+  padding-left: 3rem;
+}
+
+.pricing {
+  justify-self: end;
+  padding-right: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.month {
+  font-size: 3.2rem;
+  margin-right: 0.8rem;
+  color: hsl(227, 35%, 25%);
+}
+
+/* .billing {
+  justify-self: end;
+} */
+
+.slider {
+  position: relative;
+  width: 100%;
+  padding: 0 3rem;
+  grid-area: 2/1/3/-1;
+}
+
+.bar {
+  position: absolute;
+  z-index: 1;
+  left: 50px;
+  top: 9px;
+  width: 80%;
+  height: 10px;
+  background-color: hsl(224, 65%, 95%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: hsl(174, 77%, 80%);
+}
+
+.slider__range {
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  -webkit-appearance: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.slider__range:focus {
+  outline: none;
+}
+
+.slider__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: -webkit-grab;
+  cursor: grab;
+  background: hsl(174, 86%, 45%) url("../images/icon-slider.svg") no-repeat
+    center;
+  box-shadow: 0 1rem 3rem hsl(174, 86%, 45%);
+  transition: 0.3s ease-in-out;
+}
+
+.slider__range::-moz-range-thumb {
+  outline: none;
+  border: none;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  cursor: grab;
+  background: hsl(174, 86%, 45%) url("../images/icon-slider.svg") no-repeat
+    center;
+  box-shadow: 0 1rem 3rem hsl(174, 86%, 45%);
+}
+
+.billing {
+  grid-area: 3 / 1 / 4 / -1;
+  padding: 0 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+}
+
+.billing {
+  justify-self: end;
+}
+
+.discount {
+  background: hsl(14, 92%, 95%);
+  padding: 0.3rem;
+  border-radius: 1rem;
+  color: hsl(15, 100%, 70%);
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3.5rem;
+  height: 1.8rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.ml-sm {
+  margin-left: 1rem;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(223, 50%, 87%);
+  transition: 0.4s;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 1.2rem;
+  width: 1.2rem;
+  left: 0.5rem;
+  top: 0.3rem;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .toggle {
+  background-color: hsl(174, 86%, 45%);
+}
+
+input:checked + .toggle:before {
+  transform: translateX(1.3rem);
+}
+
+.toggle.round {
+  border-radius: 2rem;
+}
+
+.toggle.round:before {
+  border-radius: 50%;
+}
+
+.feature {
+  grid-area: 4/1/5/-1;
+  padding: 2rem 3rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid hsl(0, 3%, 88%);
+}
+
+.feature__list--item {
+  display: flex;
+  align-items: center;
+}
+
+.feature__list--item:not(:last-child) {
+  padding-bottom: 0.6rem;
+}
+
+.feature--img {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.attribution {
+  padding: 2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  color: hsl(15, 100%, 70%);
+}
+
+.attribution a {
+  color: hsl(225, 20%, 60%);
+  transition: color 0.2s;
+}
+
+.attribution a:hover {
+  color: hsl(174, 86%, 45%);
+}
+
+.btn {
+  border: none;
+  background: hsl(227, 35%, 25%);
+  color: #fff;
+  padding: 1rem 3rem;
+  border-radius: 5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: hsl(174, 86%, 45%);
+}
+.btn:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 37em) {
+  .card {
+    padding: 1rem 3rem;
+  }
+
+  .bg-img {
+    width: 80%;
+  }
+
+  .bg--headser {
+    position: absolute;
+    top: -2rem;
+    left: 35%;
+    z-index: 1;
+    opacity: 0.5;
+  }
+
+  .heading-1 {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    grid-row-gap: 0.4rem;
+  }
+
+  .pricing__box {
+    justify-items: center;
+    padding: 1rem 0;
+    grid-row-gap: 1rem;
+  }
+
+  .pageViews,
+  .pricing {
+    grid-column: 1 / -1;
+    padding: 0;
+  }
+
+  .pricing {
+    justify-self: unset;
+  }
+
+  .bar {
+    left: 45px;
+  }
+
+  .billing {
+    grid-area: 4/1/5/-1;
+    justify-self: unset;
+  }
+
+  .feature {
+    flex-direction: column;
+    grid-area: 5/1/6/-1;
+  }
+
+  .feature__list {
+    margin-bottom: 2.5rem;
+  }
+
+  .attribution {
+    padding: 1rem;
+  }
+}
+
+@media only screen and (max-width: 27em) {
+  .billing {
+    font-size: 1.1rem;
+  }
+
+  .slider,
+  .billing,
+  .feature {
+    padding: 2rem;
+  }
+
+  .bar {
+    top: 30px;
+    left: 35px;
+  }
+}
+
+@media only screen and (max-width: 23em) {
+  input:checked + .toggle:before {
+    transform: translateX(0.8rem);
+  }
+}

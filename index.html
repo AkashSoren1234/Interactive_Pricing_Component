@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+
+    <title>Interactive pricing component</title>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <main class="card">
+      <figure class="bg">
+        <img
+          src="./images/bg-pattern.svg"
+          alt="Background-image"
+          class="bg-img"
+        />
+      </figure>
+      <section class="container">
+        <header class="header">
+          <h1 class="heading-1">Simple, traffic-based pricing</h1>
+          <p class="paragraph mt-md">
+            Sign-up for our 30-day trial. No credit card required.
+          </p>
+          <figure class="bg--header">
+            <img
+              src="images/pattern-circles.svg"
+              alt="Background-image"
+              class="bg-img"
+            />
+          </figure>
+        </header>
+        <div class="pricing__box">
+          <div class="pageViews">
+            <span class="js-pageViews">100k</span> PageViews
+          </div>
+          <div class="pricing">
+            <span class="month js-price">$16</span> /month
+          </div>
+          <form action="" class="slider" autocomplete="off">
+            <label for="rangeSlider"></label>
+            <div class="bar">
+              <span class="fill js-fill"></span>
+            </div>
+            <input
+              type="range"
+              min="20"
+              max="100"
+              value="60"
+              step="20"
+              name="PriceSelected"
+              id="rangeSlider"
+              class="slider__range js-slider"
+            />
+          </form>
+          <div class="billing">
+            <span class="billing--month">Monthly Billing</span>
+            <form action="" autocomplete="off">
+              <label class="switch ml-sm">
+                <input type="checkbox" class="js-toggle" />
+                <span class="toggle round"></span>
+              </label>
+            </form>
+            <span class="year ml-sm">Yearly Billing</span>
+            <span class="discount ml-sm"> 25% discount</span>
+          </div>
+          <div class="feature">
+            <ul class="feature__list">
+              <li class="feature__list--item">
+                <img
+                  src="./images/icon-check.svg"
+                  alt="check mark"
+                  class="feature--img"
+                />
+                Unlimited websites
+              </li>
+              <li class="feature__list--item">
+                <img
+                  src="./images/icon-check.svg"
+                  alt="check mark"
+                  class="feature--img"
+                />
+                100% data ownership
+              </li>
+              <li class="feature__list--item">
+                <img
+                  src="./images/icon-check.svg"
+                  alt="check mark"
+                  class="feature--img"
+                />
+                Email reports
+              </li>
+            </ul>
+            <button class="btn js-btn">Start my trial</button>
+          </div>
+        </div>
+      </section>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Akash Soren</a>.
+      </div>
+    </main>
+    <!-- Simple, traffic-based pricing Sign-up for our 30-day trial. No credit card
+    required. Pageviews $ /month Monthly Billing Yearly Billing 25% discount
+    Unlimited websites 100% data ownership Email reports Start my trial -->
+  </body>
+</html>
