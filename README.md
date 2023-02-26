@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/AkashSoren1234/Interactive_Pricing_Component](https://github.com/AkashSoren1234/Interactive_Pricing_Component)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://akashsoren1234.github.io/Interactive_Pricing_Component](https://akashsoren1234.github.io/Interactive_Pricing_Component)
 
 ## My process
 
